@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    
+<head th:fragment="head">
+    <title>Techshop</title>
+    <meta charset="UTF-8"/>
+    
+
+    
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+    <header th:fragment="header" class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                
+             
+                <a th:href="@{/}" class="navbar-brand">[[#{aplicacion.titulo}]]</a>
+                
+                
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+              
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                    </div>
+                </div>
+                
+              
+                <div class="ms-auto">
+                    <a href="/carrito" class="btn btn-outline-secondary">
+                        <i class="bi bi-cart"></i> 
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+   
+    <footer th:fragment="footer" class="p-2 mt-5 bg-info text-white">
+        <p class="text-center lead">&COPY; [[#{plantilla.derechos}]]</p>
+    </footer>
+</body>
+
+</html>
